@@ -9,15 +9,6 @@ body {
   background: #424f6f;
 }
 
-#container {
-  width: 400px;
-  height: 400px;
-  padding: 0;
-  box-sizing: border-box;
-  background: #424f6f;
-  transition: scale 0.2s;
-}
-
 *:after,
 *:before {
   box-sizing: inherit;
@@ -78,6 +69,7 @@ body {
   height: 30px;
   background: #252c49;
   border-radius: 50%;
+  transition: 0.2s;
 }
 
 #spooky #body #mouth {
@@ -147,6 +139,38 @@ body {
   }
 }
 
+#container {
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  box-sizing: border-box;
+  background: #424f6f;
+  transition: scale 0.2s;
+  text-align: center;
+}
+
 #container:hover {
-  scale: 3.5;
+  scale: 2;
+}
+
+#boo {
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3vw;
+  transition: 0.2s;
+}
+
+#container:hover #boo {
+  opacity: 1;
+  visibility: visible;
+}
+
+#container:hover #spooky #body #eyes:before {
+  background-color: red;
+}
+
+#container:hover #spooky #body #eyes:after {
+  background-color: red;
 }
